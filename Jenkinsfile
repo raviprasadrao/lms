@@ -28,9 +28,9 @@ pipeline {
         }
     }
 
-    stage{'Deploy LMS'}
-        steps {
-            script {
+         stage('Deploy LMS')
+             steps {
+                script {
                 def packageJson = readJSON file: 'webapp/package.json'
                 def packageJSONVersion = packageJson.version
                 echo"${packageJSONVersion}"
