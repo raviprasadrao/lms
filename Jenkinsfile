@@ -28,7 +28,7 @@ pipeline {
         }
     }
 
-         stage('Deploy LMS')
+         stage('Deploy LMS') {
              steps {
                 script {
                 def packageJson = readJSON file: 'webapp/package.json'
@@ -41,6 +41,7 @@ pipeline {
                 }
 
             }
+        }
 
             stage ('clean up wrokspace') {
                 steps { 
